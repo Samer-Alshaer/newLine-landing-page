@@ -1,0 +1,191 @@
+main {
+  overflow: hidden;
+  position: relative;
+  .hero-section {
+    padding: 70px 50px 0px 50px;
+    @include media-md {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .cont {
+      @include media-md {
+        flex-direction: column-reverse;
+      }
+    }
+    .text {
+      max-width: 470px;
+      margin: auto;
+      h1 {
+        font-weight: 700;
+        span {
+          color: $main-color;
+        }
+      }
+      .btns {
+        @include media-sm {
+          flex-direction: column;
+        }
+        @include media-md {
+          justify-content: center;
+        }
+        a {
+          transition: 0.3s;
+          &:first-child {
+            background-color: $main-color;
+            color: $white;
+            padding: 9px 20px;
+            &:hover {
+              background-color: #78931d;
+              color: $white;
+            }
+          }
+          &:last-child {
+            padding: 9px 20px 7px;
+            @include media-sm {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+      @include media-md {
+        margin: 50px auto;
+      }
+    }
+    .img {
+      .images {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 500px;
+        overflow-y: auto;
+        img {
+          position: relative;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+      }
+      gap: 40px;
+      @include media-sm {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      img {
+        width: 300px;
+      }
+      .social {
+        a {
+          margin-top: 15px;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(0.8);
+          }
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        @include media-sm {
+          flex-direction: row !important;
+          align-items: center;
+          margin-top: 0 !important;
+          gap: 17px;
+        }
+      }
+      .scroll {
+        margin-top: 70px;
+        .text {
+          transform: rotate(90deg);
+          font-size: 13px;
+          span {
+            color: #000;
+          }
+        }
+        .arrow-icon {
+          img {
+            width: 100%;
+            transform: rotate(90deg);
+            margin: 50px 1px 0 0;
+            width: 20px;
+            @include media-md {
+              margin: 0 5px 0 0;
+            }
+          }
+        }
+        @include media-sm {
+          display: none;
+        }
+        @include media-md {
+          margin-top: 50px;
+        }
+        &:hover {
+          .arrow-icon {
+            animation: ranslate-y 1.5s linear infinite alternate;
+          }
+        }
+      }
+    }
+  }
+  .our-approach-section {
+    padding: 95px;
+    background-color: $gray;
+    @include media-sm {
+      width: 100%;
+      padding: 50px 0px;
+    }
+    .title {
+      text-align: center;
+    }
+    .title-img {
+      width: 200px;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      .card {
+        border-radius: 20px;
+        max-width: calc(350px - 15px);
+        margin: 15px;
+        padding: 40px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #e3e6e9;
+        &:hover {
+          h5 {
+            color: $main-color;
+            transition: 0.2s;
+          }
+        }
+        div {
+          background-color: $white;
+          padding: 20px 15px;
+          border: 1px solid #0000000f;
+          border-radius: 50%;
+          box-shadow: $light-gray 1px -1px 1px 18px;
+          width: 60px;
+          height: 60px;
+          margin-bottom: 30px;
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          font-size: 13px;
+          text-align: center;
+          margin-top: 10px;
+        }
+        @include media-md {
+          width: 100%;
+          padding: 30px 20px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

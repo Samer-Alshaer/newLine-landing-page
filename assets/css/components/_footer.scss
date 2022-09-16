@@ -1,0 +1,22 @@
+footer {
+  position: relative;
+  background-color: $white;
+  padding: 25px 0;
+  font-size: 13px;
+  .container {
+    .row {
+      @include media-sm {
+        text-align: center;
+      }
+      .text-c-r {
+        a {
+          &:last-child {
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

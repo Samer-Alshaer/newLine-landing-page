@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("/assets/fonts/GothamRoundedBook_21018.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: unset;
+}
+
+body {
+  background-color: $white;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #000;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.theme-btn {
+  padding: 5px 25px;
+  background-color: #fff;
+  border-radius: 50px;
+  color: #9ec229;
+  border: 2px solid #9ec229;
+  font-size: 14px;
+  display: block;
+  width: fit-content;
+  transition: all 0.3s;
+}
+
+.theme-btn:hover {
+  background-color: #9ec229;
+  color: $white;
+}
+
+.fade {
+  animation: fade-in 0.3s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ranslate-y {
+  0% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(7px);
+  }
+}
